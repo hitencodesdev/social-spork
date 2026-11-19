@@ -1,0 +1,30 @@
+{
+  "name": "social-spork-backend",
+  "version": "1.0.0",
+  "description": "Automated Restaurant Complaint Management & WhatsApp Notification System Backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "restaurant",
+    "complaints",
+    "whatsapp",
+    "swiggy",
+    "zomato",
+    "automation"
+  ],
+  "author": "Social Spork Engineering",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
