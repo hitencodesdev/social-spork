@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Social Spork - Complaint Sync Companion",
+  "version": "1.0.0",
+  "description": "Syncs customer complaints and dispute photos from Swiggy & Zomato to Social Spork WhatsApp Automation System.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://partner.swiggy.com/*",
+    "https://*.zomato.com/*",
+    "http://localhost:5000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Social Spork Sync"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://partner.swiggy.com/*"],
+      "js": ["content_swiggy.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://*.zomato.com/*"],
+      "js": ["content_zomato.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

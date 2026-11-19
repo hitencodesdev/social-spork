@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Social Spork Companion</title>
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .logo {
+      font-size: 15px;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge {
+      font-size: 11px;
+      background: #10b981;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+    .status-card {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+      border: 1px solid #334155;
+    }
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .status-label {
+      color: #94a3b8;
+    }
+    .btn {
+      width: 100%;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    .footer {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #64748b;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">🍴 Social Spork</div>
+    <span class="badge" id="backend-status">Connected</span>
+  </div>
+
+  <div class="status-card">
+    <div class="status-row">
+      <span class="status-label">Backend API:</span>
+      <span id="api-url">http://localhost:5000</span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Active Platform:</span>
+      <span id="platform-name">Swiggy / Zomato</span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Deduplication:</span>
+      <span style="color:#10b981;">Active (SHA-256)</span>
+    </div>
+  </div>
+
+  <button class="btn" id="trigger-sync-btn">
+    ⚡ Push Test Complaint to WhatsApp
+  </button>
+
+  <div class="footer">
+    Official WhatsApp Cloud API Dispatcher
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

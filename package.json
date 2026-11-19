@@ -1,0 +1,15 @@
+{
+  "name": "social-spork-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Social Spork Automated Restaurant Complaint Management & WhatsApp Notification System",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev:backend": "node --watch backend/src/server.js",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "test:backend": "node backend/test_ingest.js"
+  },
+  "author": "Social Spork Engineering",
+  "license": "ISC"
+}
